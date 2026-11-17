@@ -5,8 +5,8 @@
 # last pair written into it by hand (0.4.0); the tap's copy is the one `brew` reads. Everything else changes in
 # the template first: the next release overwrites the tap's copy.
 cask "portreaper" do
-  version "0.4.0"
-  sha256 "598cc53160fb453e51988797c49546f8fde14dff2125e62f3c7a49f45d955765"
+  version "0.5.1"
+  sha256 "87c4d5859e990a4d6799cd6a3dbf6a341b59e7400de19b55add6e09020b6ab1b"
 
   url "https://github.com/amitgal45/portreaper/releases/download/v#{version}/PortReaper_#{version}_universal.dmg"
   name "PortReaper"
@@ -19,7 +19,9 @@ cask "portreaper" do
   end
 
   auto_updates true
-  depends_on macos: ">= :monterey"
+  # The minimum, as a symbol: Homebrew 7 deprecates the `">= :monterey"` string form and warns
+  # on every command that reads the cask.
+  depends_on macos: :monterey
 
   app "PortReaper.app"
 
