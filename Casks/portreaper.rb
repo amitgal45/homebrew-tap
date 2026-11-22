@@ -5,8 +5,8 @@
 # last pair written into it by hand (0.4.0); the tap's copy is the one `brew` reads. Everything else changes in
 # the template first: the next release overwrites the tap's copy.
 cask "portreaper" do
-  version "0.5.1"
-  sha256 "87c4d5859e990a4d6799cd6a3dbf6a341b59e7400de19b55add6e09020b6ab1b"
+  version "0.5.2"
+  sha256 "eecdd4a3c3fd22dfeafa97ddf254973db68fa3831d948fd992e8270622123666"
 
   url "https://github.com/amitgal45/portreaper/releases/download/v#{version}/PortReaper_#{version}_universal.dmg"
   name "PortReaper"
